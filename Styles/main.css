@@ -1,0 +1,113 @@
+/* body */
+html{
+    height: 100%;
+    overflow: hidden;
+}
+body{
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+    background: url(../Images/green_background.jpg) center center no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+/* Input box */
+#input{
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    height: 60px;
+    width: Calc(50% + 80px);
+}
+#textinput{
+    position: absolute;
+    width: Calc(100% - 80px);
+    height: 100%;
+    right: 100px;
+    left: 0;
+    background-color: #ffffff70;
+    border-radius: 20px;
+    cursor: text;
+    box-sizing: border-box;
+    border: none;
+    filter: drop-shadow(2px 4px 6px black);
+    font-family: Arial;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    outline: none;
+    font-size: 16px;
+}
+#textinput::placeholder{
+    color: white;
+}
+#textsubmit{
+    position: absolute;
+    right: 0;
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 20px;
+    background-image: linear-gradient(0deg, #00b050, #25ff88);
+    color: white;
+    transition: 0.2s;
+}
+#textsubmit:hover{
+    filter: brightness(1.5);
+}
+#textsubmit:active{
+    filter: brightness(2);
+}
+/* Chat */
+#chat{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: Calc(100% - 90px);
+    overflow: scroll;
+    filter: drop-shadow(2px 4px 6px black);
+}
+.system-message{
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    font-style: italic;
+    color: #00b050;
+}
+.message{
+    padding: 8px;
+    margin: 10px;
+    margin-bottom: 0;
+    border-radius: 10px;
+    background-image: linear-gradient(0deg, #00b050, #25ff88);
+    width: fit-content;
+    max-width: 60%;
+    overflow-wrap: anywhere;
+    transition: 0.2s;
+}
+.message:hover{
+    filter: brightness(1.5);
+}
+/* make messages from the same user closer */
+.messageBelow{
+    margin-top: 2px;
+}
+.message-sender{
+    font-size: 14px;
+    color: black;
+    width: fit-content;
+}
+.from-me{
+    margin-left: auto;
+}
+.from-me .message-sender{
+    margin-left: auto;
+}
