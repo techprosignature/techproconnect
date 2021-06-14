@@ -70,7 +70,7 @@ function main() {
             HTMLmessage.classList += " messageBelow";
         }
         chat.insertAdjacentElement('beforeEnd', HTMLmessage).scrollIntoView();
-        var n = new Notification('TechPro Connect', {icon: '/Images/logo_new.png', body: message});
+        var n = new Notification(username + ' · TechPro Connect', {icon: '/Images/logo_new.png', body: message});
         document.addEventListener('visibilitychange', function() {
             if(document.visibilityState === 'visible'){
                 n.close();
