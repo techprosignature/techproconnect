@@ -83,6 +83,8 @@
                     HTMLmessage.classList += " messageBelow";
                 }
                 chat.insertAdjacentElement('beforeEnd',HTMLmessage).scrollIntoView();
+                chime.pause();
+                chime.currentTime = 0;
                 chime.play();
                 lastMessageUser = username;
             });
