@@ -19,6 +19,7 @@
         <script>
             // Prompt user for username
             function main(){
+            var room = prompt("Please enter a room name: ").trim();
             var user = prompt("Please enter your username: ").trim();
                 
             // Initialize variables
@@ -29,7 +30,7 @@
             { transports: ['websocket', 'polling'] });
             socket.on("connect", function (){
                 console.log("Socket Connected");
-                socket.emit("join", {username: user, ua: navigator.userAgent});
+                socket.emit("join", {username: user, ua: navigator.userAgent, room: room});
             });
             socket.on("log", function (data){
                 console.log("New user: " + data.ua);
