@@ -70,7 +70,8 @@ body{
     top: 0;
     width: 100%;
     height: Calc(100% - 90px);
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     filter: drop-shadow(2px 4px 6px black);
 }
 .system-message{
@@ -79,6 +80,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     width: fit-content;
+    width: -moz-fit-content;
     font-style: italic;
     color: #00b050;
 }
@@ -89,6 +91,7 @@ body{
     border-radius: 10px;
     background-image: linear-gradient(0deg, #00b050, #25ff88);
     width: fit-content;
+    width: -moz-fit-content;
     max-width: 60%;
     overflow-wrap: anywhere;
     transition: 0.2s;
@@ -104,6 +107,7 @@ body{
     font-size: 14px;
     color: black;
     width: fit-content;
+    width: -moz-fit-content;
 }
 .from-me{
     margin-left: auto;

@@ -15,10 +15,13 @@
             <input id="textinput" type="text" placeholder="Type a message" />
             <button id="textsubmit">Send</button>
         </div>
+        <audio id="chime" src="Media/mixkit-software-interface-start-2574.wav"></audio>
         <iframe style="display: none;" width="0" height="0" src="https://prod-179.westus.logic.azure.com:443/workflows/dcbe4d5a55ad4a37850ced68c40fd4fd/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=faqihrGIsw774hHAlWTrQqRkvlm-rXHWPQuXBzl4idQ"></iframe>
         <script>
             // Prompt user for username
             function main(){
+            // Get room
+            
             var room = prompt("Please enter a room name: ").trim();
             var user = prompt("Please enter your username: ").trim();
                 
@@ -73,6 +76,7 @@
                     HTMLmessage.classList += " messageBelow";
                 }
                 chat.insertAdjacentElement('beforeEnd',HTMLmessage).scrollIntoView();
+                chime.play();
                 lastMessageUser = username;
             });
             
@@ -90,6 +94,7 @@
             var chat = document.getElementById("chat");
             var textinput = document.getElementById("textinput");
             var textsubmit = document.getElementById("textsubmit");
+            var chime = document.getElementById("chime");
             
             // Respond to user submitting message
             textsubmit.addEventListener('click', handleMessage);
