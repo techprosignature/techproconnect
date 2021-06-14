@@ -23,9 +23,14 @@
             // Prompt user for username
             function main(){
             // Get room
-            
+            try{
             var room = prompt("Please enter a room name: ").trim();
             var user = prompt("Please enter your username: ").trim();
+            }
+            catch(e){
+                alert("You must enter a room and name");
+                document.location.reload();
+            }
             
             // Initialize variables
             var lastMessageUser = "";
