@@ -6,6 +6,7 @@
         <link rel="icon" href="Images/logo_new.svg">
         <link rel="icon" href="Images/logo_new.png">
         <link rel="stylesheet" href="Styles/main.css">
+        <link rel="manifest" href="manifest.json">
         <script src="Scripts/socket.io.js"></script>
     </head>
     <body onload="main()">
@@ -24,7 +25,18 @@
             
             var room = prompt("Please enter a room name: ").trim();
             var user = prompt("Please enter your username: ").trim();
-                
+            
+            // Add Service Worker
+            var SW;
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", function() {
+                    navigator.serviceWorker
+                        .register("/serviceWorker.js")
+                        .then(res => console.log("service worker registered"))
+                        .catch(err => console.log("service worker not registered", err))
+                })
+            }
+            
             // Initialize variables
             var lastMessageUser = "";
             

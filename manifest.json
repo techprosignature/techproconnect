@@ -1,0 +1,21 @@
+{
+    "short_name": "TechPro Connect",
+    "name": "TechPro Connect",
+    "icons": [
+    {
+        "src": "Images/logo_new.svg",
+        "type": "image/svg",
+        "sizes": "720x720"
+     },
+     {
+        "src": "Images/logo_new.png",
+        "type": "image/png",
+        "sizes": "1280x1280"
+     }
+     ],
+     "start_url": "index.html",
+     "background_color": "#25ff88",
+     "display": "standalone",
+     "theme_color": "#25ff88",
+     "description": "A blazing-fast chat service provided by TechPro Services"
+}
