@@ -13,7 +13,8 @@
         "sizes": "1280x1280"
      }
      ],
-     "start_url": "index.html",
+     "start_url": "/techproconnect/",
+     "scope": "/techproconnect/",
      "background_color": "#25ff88",
      "display": "standalone",
      "theme_color": "#25ff88",
