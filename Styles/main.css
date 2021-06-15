@@ -52,7 +52,8 @@ body{
     width: 60px;
     border: none;
     border-radius: 20px;
-    background-image: linear-gradient(0deg, #00b050, #25ff88);
+    background-image: url("../Images/send.svg");
+    background-size: contain;
     color: white;
     transition: 0.2s;
 }
