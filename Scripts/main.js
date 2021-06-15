@@ -8,8 +8,8 @@ if ("serviceWorker"in navigator) {
 function main() {
     // Get room
     try {
-        var room = prompt("Please enter a room name: ").trim();
         var user = prompt("Please enter your username: ").trim();
+        var room = prompt("Please enter a room name: ").trim();
     } catch (e) {
         alert("You must enter a room and name");
         document.location.reload();
@@ -70,12 +70,16 @@ function main() {
             HTMLmessage.classList += " messageBelow";
         }
         chat.insertAdjacentElement('beforeEnd', HTMLmessage).scrollIntoView();
-        var n = new Notification(username + ' · TechPro Connect', {icon: '/Images/logo_new.png', body: message});
+        if(document.visibilityState !== 'visible'){
+        title.text = "(1) TechPro Connect";
+        let n = new Notification(username + ' · TechPro Connect', {icon: '/Images/logo_new.png', body: message});
         document.addEventListener('visibilitychange', function() {
             if(document.visibilityState === 'visible'){
                 n.close();
+                title.text = "TechPro Connect";
             }
         });
+        }
         chime.pause();
         chime.currentTime = 0;
         chime.play();
@@ -97,6 +101,7 @@ function main() {
     var textinput = document.getElementById("textinput");
     var textsubmit = document.getElementById("textsubmit");
     var chime = document.getElementById("chime");
+    var title = document.querySelector("title");
 
     // Respond to user submitting message
     textsubmit.addEventListener('click', handleMessage);
