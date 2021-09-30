@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g class="layer">
+  <title>Layer 1</title>
+  <g id="svg_3">
+   <line fill="none" id="back" stroke="url(#svg_2)" stroke-linecap="round" stroke-width="15" x1="15" x2="185" y1="15" y2="185"/>
+   <line fill="none" id="back" stroke="url(#svg_2)" stroke-linecap="round" stroke-width="15" x1="15" x2="185" y1="185" y2="15"/>
+  </g>
+ </g>
+ <defs>
+  <linearGradient id="svg_2" x1="0" x2="0" y1="0" y2="1">
+   <stop id="jq_stop_3640" offset="0" stop-color="#25ff88"/>
+   <stop id="jq_stop_9514" offset="1" stop-color="#00b050"/>
+  </linearGradient>
+ </defs>
+</svg>
